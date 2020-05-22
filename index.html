@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8' />
+    <meta charset="utf-8" />
     <title>4D Collab WebUI Demo</title>
-    <script src='https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v6.0'></script>
-	<script src='forge_js.js'></script>
-    <link rel='stylesheet' href='https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v6.0' type='text/css'>
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v6.0"></script>
+	<script type="text/javascript" language="javascript" src="app.config.js"></script>
+	<script type="text/javascript" language="javascript" src="forge_js.js"></script>
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v6.0" type="text/css">
 </head>
 <body>
-	<!-- FORGE VIEWER COLUMN-->
+	<!--Identifiant :
+	<input id="email" type="text" name="email"><br>
+	Mot de passe :
+	<input id="mdp" type="password" name="mdp"><br>
+	<button id="register">S'authentifier</button>-->
 	
-	<button id='textChanger' onclick="afficher();">Coucou</button>
-	<div id='forgeViewer' style='width:auto; height:600px; overflow:auto; position: relative'>ici</div>
+	Session name : 
+	<input id="Sname" type="text" name="Sname"><br>
+	<!-- FORGE VIEWER COLUMN-->
+	<div id="forgeViewer" style="width:auto; height:600px; overflow:auto; position: relative"></div>
+	
 </body>
 </html>
