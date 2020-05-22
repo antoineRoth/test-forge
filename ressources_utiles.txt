@@ -1,1 +1,3 @@
-https://forge.autodesk.com/en/docs/viewer/v2/reference/javascript/viewer3d/ =======> méthodes degestion du Viewer3D
+https://forge.autodesk.com/en/docs/viewer/v2/reference/javascript/viewer3d/ =======> méthodes de gestion du Viewer3D
+
+https://forge.autodesk.com/en/docs/viewer/v2/reference/javascript/ ================> toutes les méthodes javascript agissant sur forge
