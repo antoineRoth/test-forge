@@ -6,4 +6,12 @@ aller sur dyma pour une formation gratuite de vue js
 
 vidéos :
 ==> https://forge.autodesk.com/blog/forge-aspnet-zero-hero-30-minutes
-==> https://www.youtube.com/watch?v=6O4Td3F4IjA => test de la ressource effectué, non concluant (erreur sur le manifeste)
+==> https://www.youtube.com/watch?v=6O4Td3F4IjA
+
+
+
+page de ref de tuto simples pour chaque étapes de la visualisation dans un viewer : 
+=> https://adndevblog.typepad.com/cloud_and_mobile/2016/09/forge-tutorials-which-should-i-use.html => la pluspart déjà vues ou plus existantes.
+
+Github de samples :
+=> https://github.com/Developer-Autodesk
