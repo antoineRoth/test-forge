@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no" />
     <meta charset="utf-8">
@@ -44,13 +46,13 @@
                 //    "expires_in": 86400
                 // }
                 //
-                var accessToken = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJmZ2Jtd29zdVU4OUlhOVptOFJnRGhHUWdXTTlaVXhoSmUydnJxUXRHbkR4TEJLWWk3cHpGWmNaRHVIVDllZ0ozIiwiZXhwIjoxNTkwNDE1OTUxfQ.WGhcCbzDKsfh7DCRDpJIJv32Y08jvqR_wMf2b3NAIFk';
+                var accessToken = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJ4YXlCZTZxb2p3dWxkUDdPamw5dmVGUmZpN3d3UElPcXJkSG5iUE9NUzhHZGdoWUc1NnVmcmNzYklyakNkbVNVIiwiZXhwIjoxNTkwNDE3MDU1fQ.BJEe99wb6qvXpAwhEmyokurD83Ky3uuQhTcOG7vGTLE';
                 var expireTimeSeconds = 60 * 30;
                 onGetAccessToken(accessToken, expireTimeSeconds);
             }
 
         };
-        var documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6cHJlbWllcnRlc3RfY29sbGFiXzI1XzA1XzIwMjBfdjIvU2FtcGxlSG91c2UtaWZjNC5pZmM';
+        var documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6Zmlyc3RfdGVzdF8yNV8wNS90ZXN0LmlmYw';
         Autodesk.Viewing.Initializer(options, function onInitialized(){
             viewerApp = new Autodesk.Viewing.ViewingApplication('MyViewerDiv');
             viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D);
@@ -91,3 +93,4 @@
 
     </script>
 </body>
+</html>

@@ -6,4 +6,4 @@ aller sur dyma pour une formation gratuite de vue js
 
 vidéos :
 ==> https://forge.autodesk.com/blog/forge-aspnet-zero-hero-30-minutes
-==> https://www.youtube.com/watch?v=6O4Td3F4IjA
+==> https://www.youtube.com/watch?v=6O4Td3F4IjA => test de la ressource effectué, non concluant (erreur sur le manifeste)
