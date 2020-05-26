@@ -1,20 +1,20 @@
-https://forge.autodesk.com/en/docs/viewer/v2/reference/javascript/viewer3d/ =======> méthodes de gestion du Viewer3D
+//    déjà parcourus    https://forge.autodesk.com/en/docs/viewer/v2/reference/javascript/viewer3d/ =======> méthodes de gestion du Viewer3D
 
-https://forge.autodesk.com/en/docs/viewer/v2/reference/javascript/ ================> toutes les méthodes javascript agissant sur forge
+//	vvvvvvvvvv	https://forge.autodesk.com/en/docs/viewer/v2/reference/javascript/ ================> toutes les méthodes javascript agissant sur forge
 
-aller sur dyma pour une formation gratuite de vue js
+//			aller sur dyma pour une formation gratuite de vue js
 
-vidéos :
-==> https://forge.autodesk.com/blog/forge-aspnet-zero-hero-30-minutes
-==> https://www.youtube.com/watch?v=6O4Td3F4IjA
+//			vidéos :
+//			==> https://forge.autodesk.com/blog/forge-aspnet-zero-hero-30-minutes
+//			==> https://www.youtube.com/watch?v=6O4Td3F4IjA
 
 
 
-page de ref de tuto simples pour chaque étapes de la visualisation dans un viewer : 
-=> https://adndevblog.typepad.com/cloud_and_mobile/2016/09/forge-tutorials-which-should-i-use.html => la pluspart déjà vues ou plus existantes.
-
-Github de samples :
-=> https://github.com/Developer-Autodesk
+//			page de ref de tuto simples pour chaque étapes de la visualisation dans un viewer : 
+//			=> https://adndevblog.typepad.com/cloud_and_mobile/2016/09/forge-tutorials-which-should-i-use.html => la pluspart déjà vues ou plus existantes.
+	
+//			Github de samples :
+//			=> https://github.com/Developer-Autodesk
 
 
 
@@ -22,5 +22,23 @@ banque d'exemples autodesk :
 => https://forge-rcdb.autodesk.io/gallery?_ga=2.64062703.1381844138.1590409591-1956783927.1589813146
 
 
-tuto autodesk :
-=> https://forge.autodesk.com/en/docs/data/v2/tutorials/download-file/
+//			tuto autodesk :
+//			=> https://forge.autodesk.com/en/docs/data/v2/tutorials/download-file/
+
+
+code de changement de la couleur de séléction des objets dans le viwer forge :
+=> https://jsfiddle.net/dukedhx/rLxypb6q/1/ 
+(page satckoverflow originale : https://stackoverflow.com/questions/54874871/how-do-you-change-selection-color-in-the-autodesk-forge-viewer/55111040)
+
+
+page de référence pour le changement des couleurs pour les agrrégats d'objets 3D (objets séléctionnés) : 
+=> https://forge.autodesk.com/blog/highlighting-clashes-multi-model 
+(méthode de séléction et d'isolation des éléments explquées.)
+
+
+explications pour le changement d'actions dans le menu de forge (menu déroulant pas menu statique (barre de menu)) :
+=> https://forge.autodesk.com/blog/customize-viewer-context-menu
+
+
+gestion des évènements dans le viewer + création d'un bouton dans la barre de menu (en lien dans le menu step-by-step) :
+=> https://forge.autodesk.com/en/docs/viewer/v6/tutorials/events/
