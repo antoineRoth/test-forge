@@ -48,8 +48,8 @@
 
   <script>
 
-    var token = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJJeUIwMkV5bVVpYU5wZkx0NFdLbmVLdW5USFRDajBMUjlPbzU0V2VMUFdEUFlXR29TT2VRcTVmZmtoaUhSTHJNIiwiZXhwIjoxNTkwNTAxMzk2fQ.1MwkNLFnrbrQTuN0EPPgn24Q6RVbQPizY_2COm3Yg6A';
-    // replace URN with one generated
+    var token = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJUM3I3U3RPblcyUnBnSEhzc1d5eUZQMno1YTBPOWJIRGlyT1J6SjRhZ0lLbDVoR3Y1blFrbDVidE9ZY3FQT0JDIiwiZXhwIjoxNTkwNTk0MDQ1fQ.S_glZ3dNaC70vQhzq96dYqcK8DVntME11F0ACFayg6w';
+	// replace URN with one generated
     // from corresponding credentials to the token above
     var urn = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dGVzdF9jb2xsYWJfdjQvUHJvamVjdDEuaWZj'
 
@@ -102,6 +102,9 @@
       viewer.initialize()
 
       viewer.loadModel(doc.getViewablePath(selectedItem))
+	  
+	  viewer.impl.setSelectionColor(new THREE.Color(1,0,0));
+	  viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, ()=>viewer.select(1))
     }
 
     /////////////////////////////////////////////////////////////////
@@ -137,7 +140,8 @@
       initOptions,
       function() {
         onEnvInitialized ()
-      })
+      }
+	)
 
   </script>
 
