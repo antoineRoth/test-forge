@@ -42,3 +42,11 @@ explications pour le changement d'actions dans le menu de forge (menu déroulant
 
 gestion des évènements dans le viewer + création d'un bouton dans la barre de menu (en lien dans le menu step-by-step) :
 => https://forge.autodesk.com/en/docs/viewer/v6/tutorials/events/
+
+
+récupération des ids des objets 3D du model dans le viewer :
+=> https://adndevblog.typepad.com/cloud_and_mobile/2015/12/select-all-elements-in-the-viewer-with-view-and-data-api-with-javascript.html
+
+
+appels de l'api de forge pour l'authentification jusqu'à la génération du manifeste :
+=> https://github.com/Autodesk-Forge/forge-api-nodejs-client/blob/master/README.md
