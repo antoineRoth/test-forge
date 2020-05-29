@@ -1,22 +1,9 @@
 // le token et l'urn permettent l'affichage 
 // dans le viewer de la ressource correspondante (à l'urn demandé)
-var token = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJFTHUzZzdVM2pGaUJpT2NuMDZlQmx6S1VTam1qVDBtVzdtZUUweUZNNjZ4Zk9VZXVkbWpab0g3SFdPa2NmTE1JIiwiZXhwIjoxNTkwNjc2Nzg1fQ.PMMMVBuoGuMxgZvHR4ik59FNMdbSTj4lT9IH8Gc0YiI';
+var token = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJzQlRZd2w2Y0tkNWdSaHZ5eU81RVJ6SklFd1RBcWRxQVpUV3ptTVI1TmhvRXA3d0I5am9YZUxRdmhqa1B3UjFmIiwiZXhwIjoxNTkwNzY0MDczfQ.HAqelUvfEZAgGDiH202jmD_6sB5eE-W2kNVaGhQbWQI';
 var urn = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dGVzdF9jb2xsYWJfdjQvUHJvamVjdDEuaWZj'
 
 function getToken (CLIENT_ID, CLIENT_SECRET) {
-  var ForgeSDK = require('forge-apis')
-
-  // autoRefresh est à true si on veut que ACCESS_TOKEN 
-  // se rafraichisse automatiquement, false sinon 
-  var autoRefresh = true;
-
-  var oAuth2TwoLegged = new ForgeSDK.AuthClientTwoLegged(CLIENT_ID, CLIENT_SECRET, [
-      'data:read', 'data:write'
-    ]
-
-    )
-}
-
 // options nécessaires pour le viewer forge
 var initOptions = {
   documentId: urn,
