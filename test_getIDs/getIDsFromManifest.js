@@ -110,15 +110,21 @@ manifest = JSON.parse(manifest);
 
 var derivatives = manifest.derivatives;
 
+getGUIDs(derivatives);
+
 //affiche dans la console tous les guids présents dans le json
 //fonction récursive prenant en paramètre un tableau d'objets
-function getGUIDs (derivatives) {
-	var guid = null;
-	for (childrens in derivatives) {
-		guid = childrens.guid;
-		console.log(guid);
-		
+function getGUIDs (tab) {
+	var i = 0;
+	while (tab[i]!=undefined) {
+		if (tab[i].guid!=undefined) {
+			console.log(tab[i].guid);
+		}
+		if (tab[i].children!=undefined) {
+			getGUIDs(tab[i].children);
+		}
+		i++;
 	}
 }
 
-getGUIDs(derivatives);
+
