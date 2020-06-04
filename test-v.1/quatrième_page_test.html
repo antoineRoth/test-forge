@@ -47,11 +47,12 @@
   <div id="viewer" class="viewer"></div>
 
   <script>
-    
-    var token = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJWNzRIQW1nRTJVeVpIQXB6QWFncHI0bElCRWdzOUVySERJTlRqVk9xTGZHRngzaUpDSFE5TzA3a2E1QWh5ZHlGIiwiZXhwIjoxNTkxMjgxNzM2fQ.dj3ps8_HLIePqQmk2oLoSapbnf-e5Sa_k_hMgXhXNrI';
+
+    var token = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJzQlRZd2w2Y0tkNWdSaHZ5eU81RVJ6SklFd1RBcWRxQVpUV3ptTVI1TmhvRXA3d0I5am9YZUxRdmhqa1B3UjFmIiwiZXhwIjoxNTkwNzY0MDczfQ.HAqelUvfEZAgGDiH202jmD_6sB5eE-W2kNVaGhQbWQI';
 	// replace URN with one generated
     // from corresponding credentials to the token above
-    var urn = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6ZGFtbi9wcm9qZWN0MS5pZmM'
+    var urn = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dGVzdF9jb2xsYWJfdjQvUHJvamVjdDEuaWZj'
+
     /////////////////////////////////////////////////////////////////
     // Initialization Options
     //
@@ -102,8 +103,16 @@
 
       viewer.loadModel(doc.getViewablePath(selectedItem))
 	  
-	  viewer.impl.setSelectionColor(new THREE.Color(1,0,0));
-	  viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, ()=>viewer.select(1))
+  	  viewer.impl.setSelectionColor(new THREE.Color(1,0,0));
+  	  viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, ()=>viewer.select(1))
+
+      viewer.search('e84c0e1c-fb65-5524-9276-61550e731ce4', function(e)
+      {
+         viewer.utilities.fitToView(e);
+         viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, ()=>viewer.select(e))
+         viewer.select(e);
+         console.log(e);
+      })
     }
 
     /////////////////////////////////////////////////////////////////

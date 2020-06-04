@@ -1,0 +1,2 @@
+https://forge.autodesk.com/en/docs/viewer/v7/reference/Viewing/Viewer3D/#select-dbids-model-selectiontype;
+https://forge.autodesk.com/blog/get-all-dbid-without-enumerating-model-hierarchy
