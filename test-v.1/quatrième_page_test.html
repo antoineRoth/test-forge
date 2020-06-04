@@ -48,10 +48,10 @@
 
   <script>
 
-    var token = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJzQlRZd2w2Y0tkNWdSaHZ5eU81RVJ6SklFd1RBcWRxQVpUV3ptTVI1TmhvRXA3d0I5am9YZUxRdmhqa1B3UjFmIiwiZXhwIjoxNTkwNzY0MDczfQ.HAqelUvfEZAgGDiH202jmD_6sB5eE-W2kNVaGhQbWQI';
+    var token = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJzY29wZSI6WyJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJidWNrZXQ6cmVhZCIsImJ1Y2tldDpjcmVhdGUiXSwiY2xpZW50X2lkIjoiVVVVNk9hbmFaUGJNdHgyS0VkUzFJQXVjS0d4RjVqTXkiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiJWRnk5aTZDNklDTnlEU0puQXk1aWt5ZEtZVWNUNzVLZHYwQkRUcTRhVU9YSFJvWUNwNTJ2WFVXaEd3NEk4N0FIIiwiZXhwIjoxNTkxMjYwNjE2fQ.u2LvSV_glaklsE8rAhBlNVTEEbd6Yb8PPOnfd6-R-fY';
 	// replace URN with one generated
     // from corresponding credentials to the token above
-    var urn = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dGVzdF9jb2xsYWJfdjQvUHJvamVjdDEuaWZj'
+    var urn = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YW50b2luZV9yb3RoL3Byb2plY3QxLmlmYw'
 
     /////////////////////////////////////////////////////////////////
     // Initialization Options
@@ -103,8 +103,16 @@
 
       viewer.loadModel(doc.getViewablePath(selectedItem))
 	  
-	  viewer.impl.setSelectionColor(new THREE.Color(1,0,0));
-	  viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, ()=>viewer.select(1))
+  	  viewer.impl.setSelectionColor(new THREE.Color(1,0,0));
+  	  viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, ()=>viewer.select(1))
+
+      viewer.search('e84c0e1c-fb65-5524-9276-61550e731ce4', function(e)
+      {
+         viewer.utilities.fitToView(e);
+         viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, ()=>viewer.select(e))
+         viewer.select(e);
+         console.log(e);
+      })
     }
 
     /////////////////////////////////////////////////////////////////
