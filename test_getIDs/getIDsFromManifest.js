@@ -327,6 +327,7 @@ var manifest2 = `{
 manifest2 = JSON.parse(manifest2);
 
 var derivatives = manifest2.derivatives;
+//var branches = 0;
 
 getGUIDs(derivatives);
 
@@ -334,15 +335,21 @@ getGUIDs(derivatives);
 //fonction récursive prenant en paramètre un tableau d'objets
 function getGUIDs (tab) {
 	var i = 0;
+  //var hadID = false;
 	while (tab[i]!=undefined) {
 		if (tab[i].guid!=undefined) {
 			console.log(tab[i].guid);
+      //hadID = true;
 		}
 		if (tab[i].children!=undefined) {
 			getGUIDs(tab[i].children);
 		}
 		i++;
 	}
+  /*if (hadID) {
+    branches++;
+    console.log("branche : " + branches);
+  }*/
 }
 
 
